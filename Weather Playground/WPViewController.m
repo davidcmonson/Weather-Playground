@@ -35,7 +35,7 @@
         self.locationLabel.text = weather.locationName;
         self.weatherMainLabel.text = weather.weatherMain;
         self.weatherDescriptionLabel.text = weather.weatherDescription;
-        self.temperatureLabel.text = [NSString stringWithFormat:@"%.1f", [self fahrenheitFromKelvinString:weather.weatherTemp]];
+        self.temperatureLabel.text = [NSString stringWithFormat:@"%.1f℉", [self fahrenheitFromKelvinString:weather.weatherTemp]];
         NSString *iconString = [NSString stringWithFormat:@"http://openweathermap.org/img/w/%@.png", weather.weatherIcon];
         NSURL *iconURL = [NSURL URLWithString:iconString];
         [self.weatherIcon setImageWithURL:iconURL];
@@ -45,6 +45,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"blue"]];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
