@@ -14,7 +14,7 @@
 @property (nonatomic, strong) NSString *weatherMain;
 @property (nonatomic, strong) NSString *weatherDescription;
 @property (nonatomic, strong) NSString *weatherIcon;
-@property (nonatomic, strong) NSNumber *weatherTemp;
+@property (nonatomic, strong) NSString *weatherTemp;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
